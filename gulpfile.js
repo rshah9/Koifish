@@ -251,17 +251,18 @@ gulp.task('default', function () {
 //     .pipe(phpunit('./vendor/bin/phpunit',options));
 // });
 //
-// // WIP
+// // WIP - enable gulp shell 9/9/2016:rshah9
 // var pdependDocs = 'documentation/pdepend';
-// gulp.task('pdepend',
-//   gulpshell.task(['mkdir -p ' + pdependDocs,
-//   'vendor/bin/pdepend --summary-xml=' + pdependDocs +
-//   '/summary.xml --jdepend-chart=' + pdependDocs +
-//   '/chart.svg --overview-pyramid=' + pdependDocs +
-//   '/pyramid.svg --ignore=vendor,node_modules --suffix=php,install,module,inc ' +
-//   'docroot/sites/all/modules/custom'
-//   ])
-// );
+gulp.task('pdepend',
+  gulpshell.task([
+  //   'mkdir -p ' + pdependDocs,
+  // 'vendor/bin/pdepend --summary-xml=' + pdependDocs +
+  // '/summary.xml --jdepend-chart=' + pdependDocs +
+  // '/chart.svg --overview-pyramid=' + pdependDocs +
+  // '/pyramid.svg --ignore=vendor,node_modules --suffix=php,install,module,inc ' +
+  // 'docroot/sites/all/modules/custom'
+  ])
+);
 //
 // // // PHP Watch Task - In case you want to just watch PHP work
 // // gulp.task('phpqawatch', function () {
